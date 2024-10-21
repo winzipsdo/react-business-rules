@@ -15,7 +15,7 @@ export interface BusinessRuleExpressionProps extends BusinessRuleCommonProps {
 export interface BusinessRuleAllOrAnyProps extends BusinessRuleCommonProps {
   type: RuleType.AllOrAny;
   condition: Condition;
-  rules: BusinessRuleAllOrAnyProps[] | BusinessRuleExpressionProps[];
+  rules: (BusinessRuleAllOrAnyProps | BusinessRuleExpressionProps)[];
 }
 
 export type BusinessRule = BusinessRuleAllOrAnyProps | BusinessRuleExpressionProps;
